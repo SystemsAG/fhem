@@ -92,7 +92,7 @@ a:active {
 .black          { color:#111111 !important; }
 .white          { color:#ffffff !important; }
 .orange         { color:#aa6900 !important; }
-.orange_hell         { color:#E89510 !important; }
+.orange_hell    { color:#E89510 !important; }
 .red            { color:#ad3333 !important; }
 .green          { color:#32a054 !important; }
 .ligthblue      { color:#6699FF !important; }

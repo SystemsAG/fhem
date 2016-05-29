@@ -291,10 +291,12 @@ a:active {
 .top-narrow{ margin-top: -15px !important; }
 .top-narrow-2x,.top-narrow-2{ margin-top: -30px !important; }
 
+.left-narrow-5{ margin-left: -5px !important; }
 .left-narrow-10{ margin-left: -10px !important; }
 .left-narrow{ margin-left: -15px !important; }
 .left-narrow-2x,.left-narrow-2{ margin-left: -30px !important; }
 
+.right-narrow-5{ margin-right: -5px !important; }
 .right-narrow-10{ margin-right: -10px !important; }
 .right-narrow{ margin-right: -15px !important; }
 .right-narrow-2x,.right-narrow-2{ margin-right: -30px !important; }
