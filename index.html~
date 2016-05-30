@@ -30,7 +30,7 @@
 		<link rel="stylesheet" href="/fhem/tablet/fonts/roman/style.css" />
 		<link rel="stylesheet" href="/fhem/tablet/fonts/material/style.css" />
 		<!-- Custom CSS -->
-        <link rel="stylesheet" href="/fhem/tablet/css/fhem-tablet-ui-user_tablet.css" />
+      <link rel="stylesheet" href="/fhem/tablet/css/fhem-tablet-ui-user_tablet.css" />
 		<!-- Scripts -->
 		<script src="/fhem/pgm2/jquery.min.js" defer></script>
 		<script src="/fhem/tablet/lib/jquery.toast.min.js" defer></script>
@@ -39,8 +39,8 @@
 		<script type="text/javascript" src="/fhem/tablet/lib/powerange.min.js"></script>
 		<script type="text/javascript" src="/fhem/tablet/lib/fa-multi-button.min.js"></script>
 		<script src="/fhem/tablet/lib/jquery.gridster.min.js" defer></script>
-		 <script src="/fhem/tablet/js/fhem-tablet-ui.js" defer></script> 
-		<!-- <script src="/fhem/tablet/js/fhem-tablet-ui-2.0_beta.js" defer></script> -->
+		<!--  <script src="/fhem/tablet/js/fhem-tablet-ui.js" defer></script> -->
+		<script src="/fhem/tablet/js/fhem-tablet-ui-2.0_beta.js" defer></script> 
 		<script type="text/javascript" src="/fhem/tablet/js/fhem-tablet-ui.js"></script>
 </head>
 
