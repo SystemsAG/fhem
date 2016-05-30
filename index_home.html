@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
         <title>HOME</title>
@@ -337,6 +336,7 @@
 		</div>	
 </li>
 
+
 <li class="halbTransparent border-right" data-row="2" data-col="9" data-sizex="1" data-sizey="4">
 	<header class="headerTransparent">EXTRAS</header>
 		<div data-type="pagetab" 
@@ -357,6 +357,20 @@
 			 data-on-color="#C4C4C4"
 			 data-off-color="#C4C4C4"
 			 data-icon="ftui-window"
+=======
+<li class="halbTransparent border-right" data-row="2" data-col="8" data-sizex="1" data-sizey="2">
+	<header class="headerTransparent">MÜLL</header>
+	<div class="top-space">
+		<div data-type="button"
+			 data-background-icon="none"
+			 data-device="myAbfall"
+			 data-get="Restmuell_tage"
+			 data-off-color="#808080"
+			 data-fhem-cmd="setreading myAbfall Restmuell_tage off"
+			 data-get-on='["off","0","1","[2-9]{1}|[0-9]{2}"]'
+			 data-icons='["ro-bin warn","ro-bin warn","ro-bin warn blink","ro-bin warn"]'
+			 data-on-colors='["#808080","#808080","#808080","#808080"]'
+>>>>>>> master
 			 class="bigger">
 		</div>
 	   <div data-type="label" class="cell top-narrow">Rolladen</div>
@@ -382,11 +396,42 @@
 			 data-icon="oa-weather_rain"
 			 class="bigger">
 		</div>
+<<<<<<< HEAD
 		<div data-type="popup"
 			 data-device="alarm_scharf"
 			 data-get-on="on"
 			 data-width="350px"
 			 data-height="525px">
+=======
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="2" data-col="9" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">EXTRAS</header>
+<div data-type="pagetab"
+		 data-url="abfahrt.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="ma-directions_bus"
+		 class="bigger">
+	</div>
+	<div data-type="pagetab"
+		 data-url="regenradar.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#808080"
+		 data-off-color="#808080"
+		 data-icon="oa-weather_rain"
+		 class="bigger">
+	</div>
+	<div data-type="popup"
+		 data-device="alarm_scharf"
+		 data-get-on="on"
+		 data-width="350px"
+		 data-height="525px">
+>>>>>>> master
 		<div data-type="symbol"
 			 data-device="dummy_alarm"
 			 data-states='["on","off"]'
