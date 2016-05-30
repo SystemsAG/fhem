@@ -95,7 +95,23 @@
 		<div class="top-narrow-2x">WETTER</div>
 	<tr>
 		
+<<<<<<< HEAD
 	   <div class="left top-narrow-2x">
+=======
+		<!-- ##############################################################muss noch bearbeitet werden################### -->
+		<div data-type="label" class="small">Sonnenaufgang</div>
+	   <span style="color:#E89510">
+	   <div data-type="label" 
+			data-device="Sonnenaufgang"
+			data-colors="orange_hell"></div></span>
+		<div data-type="label" class="small">Sonnenuntergang</div>
+		<span style="color:#E89510"><div data-type="label" 
+			data-device="Sonnenuntergang"
+			data-colors="#C4C4C4"></div>
+			</span>
+			<!-- ######################################################################################################## -->	
+		</tr>	
+>>>>>>> master
 		<div data-type="label" 
 			 data-device="NeuUlm_Wetter" 
 			 data-get="temperature" 
