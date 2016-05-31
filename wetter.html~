@@ -6,7 +6,11 @@
 <body>
 
 <div class="gridster">
+
 <ul>
+
+<!-- ################################################################# HEADER BEGIN ######################################################################### -->
+
 <li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">HOME</header>
 	<div data-type="pagetab"
@@ -15,52 +19,46 @@
 		 data-url="index_home.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
 		 data-icon="fa-home"
 		 data-icons='["fa-home","fa-home warn"]'
 		 class="bigger top-space">
 	</div>
 </li>
 
-<li class="halbTransparent" data-row="1" data-col="2" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">SONNE</header>
+<li class="halbTransparent border-right" data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">HEIZUNG</header>
 	<div class="top-space">
-		<div data-type="label"
-			 data-device="Wetter_Pro"
-			 data-get="fc0_sun"
-			 data-limits='[0,40,80]'
-			 data-colors='["firebrick","#aa6900","green"]'
-			 data-unit="%"
-			 class="bigger">
-		</div>
-	</div>
-	<div class="">
-		<div class="cell inline big">UV:
-		</div>
-		<div data-type="label"
-			 data-device="Wetter_Pro"
-			 data-get="fc0_uv"
-			 data-limits="[0,4,8,11]"
-			 data-colors='["green","#aa6900","firebrick","red"]'
-			 class="cell bigger inline">
+		<div class="inline">
+			<div data-type="checkbox"
+				 data-device="heatingcontrol_dummy"
+				 data-on-color="green"
+				 data-off-color="red"
+				 data-on-background-color= "#EEEDF0"
+				 data-off-background-color="#3D4C66"
+				 class="green medium cell top-space">
+			</div>
+			<div class="top-space">Wochenprogramm</div>
 		</div>
 	</div>
 </li>
 
-<li class="halbTransparent border-left border-right" data-row="1" data-col="3" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">REGEN</header>
-	<div data-type="label"
-         data-device="Wetter_Pro"
-         data-get="fc0_chOfRainDay"
-         data-limits='[0,40,80]'
-         data-colors='["green","#aa6900","firebrick"]'
-         data-unit="%"
-         class="top-space-2x bigger">
+<li class="halbTransparent border-right" data-row="1" data-col="4" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">UHRZEIT / DATUM</header>
+	<div data-type="clock"
+		 data-format="H:i:s"
+		 data-interval="1000"
+		 class="orange_hell bigger thin">
+	</div>
+	<div data-type="clock"
+		 data-format="D. d.m.Y"
+		 data-shortday-length="2"
+		 class="big">
 	</div>
 </li>
 
-<li class="halbTransparent border-left border-right" data-row="1" data-col="4" data-sizex="1" data-sizey="1">
+<li class="halbTransparent border-right" data-row="1" data-col="6" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">DWD</header>
 	<div data-type="pagetab"
 		 data-device="gds"
@@ -69,188 +67,303 @@
 		 data-url="dwd.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
 		 data-icon="fa-bolt"
 		 data-icons='["fa-bolt","fa-bolt warn"]'
 		 class="bigger top-space">
 	</div>
 </li>
 
-<li class="halbTransparent border-right" data-row="1" data-col="5" data-sizex="2" data-sizey="1">
-	<header class="headerTransparent">AUßENTEMPERATUR</header>	
-	<div class="top-space">
-		<div class="inline" style="width:30%">
-			<div data-type="label" 
-				 data-device="esp8266_DS18Temp_aussen"
-				 data-limits='[-73,18,28]' 
-				 data-colors='["cornflowerblue","green","firebrick"]' 
-				 data-unit="%B0C%0A" 
-				 data-substitution="s/(\d$)//g"
-				 class="big">
-			</div>
-			<div class="top-space">
-				<div data-type="klimatrend"
-					 data-device="Wetter_Pro"
-					 data-get="statTemperatureTendency"
-					 data-refperiod="1"
-					 class="inline large" >
-				</div>
-				<div data-type="klimatrend"
-					 data-device="Wetter_Pro"
-					 data-get="statTemperatureTendency"
-					 data-refperiod="2"
-					 class="inline large" >
-				</div>
-			</div>
-			<div class="top-space">Temperatur
-			</div>
-		</div>
-		<div class="inline" style="width:30%">
-				<div data-type="label" 
-					 data-device="Wetter_Pro"
-					 data-get="humidity"
-					 data-limits='[0,40,71]' 
-					 data-colors='["cornflowerblue","green","firebrick"]' 
-					 data-unit="%" 
-					 class="big">
-				</div>
-			<div class="top-space">
-				<div data-type="klimatrend"
-					 data-device="Wetter_Pro"
-					 data-get="statHumidityTendency"
-					 data-refperiod="1"
-					 class="inline large" >
-				</div>
-				<div data-type="klimatrend"
-					 data-device="Wetter_Pro"
-					 data-get="statHumidityTendency"
-					 data-refperiod="2"
-					 class="inline large" >
-				</div>
-			</div>
-				<div class="top-space">Luftfeuchte
-				</div>
-		</div>
-		<div class="inline" style="width:30%">
-				<div data-type="label" 
-					 data-device="Wetter_Pro"
-					 data-get="dewPoint"
-					 data-limits='[-73,18,28]' 
-					 data-colors='["cornflowerblue","green","firebrick"]'  
-					 data-unit="%B0C%0A" 
-					 class="big">
-				</div>
-			<div class="top-space">
-				<div data-type="klimatrend"
-					 data-device="Wetter_Pro"
-					 data-get="statDewPointTendency"
-					 data-refperiod="1"
-					 class="inline large" >
-				</div>
-				<div data-type="klimatrend"
-					 data-device="Wetter_Pro"
-					 data-get="statDewPointTendency"
-					 data-refperiod="2"
-					 class="inline large" >
-				</div>
-			</div>
-				<div class="top-space">Taupunkt
-				</div>
-		</div>
-	</div>
-</li>
-
-<li class="halbTransparent border-right" data-row="1" data-col="7" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">WETTER</header>
-	<div data-type="pagetab"
+<li class="halbTransparent border-right centered" data-row="1" data-col="7" data-sizex="2" data-sizey="1">
+	
+	<header class="headerTransparent">WETTER & INNENTEMPERATUR</header>
+				
+	<div class="top-narrow-10 centered">		
+		<div data-type="pagetab"
 		 data-url="wetter.html"
 		 data-background-icon="fa-circle-thin"
 		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
 		 data-icon="fa-cloud"
-		 class="bigger top-space">
+		 class="bigger">
+		</div>
+	
+		<div class="top-narrow">WETTER</div>
+	</div>
+
+	
+   <div class="left top-narrow-2x">
+		<div data-type="label" 
+			 data-device="NeuUlm_Wetter" 
+			 data-get="temperature" 
+			 data-part="1" data-limits='[-73,0,30]'
+			 data-colors='["#6699FF","#AA6900","#FF0000"]'
+			 data-unit="%B0C%0A" 
+			class="centered big top-narrow">
+		</div>
+		<br>
+		<div class="left top-narrow-2x">
+			<div data-type="klimatrend"
+				 data-device="wz_Sensor"
+	          data-get="statTemperatureTendency"
+				 data-refperiod="1"
+				 data-stagnating-color="rgb(80,80,80)"
+				 data-falling-color="rgb(80,80,180)"
+				 data-highmark="1"
+				 data-highmark-icon="fa-angle-double"
+				 data-highmark-rising-color="rgb(255,80,80)"
+				 data-highmark-falling-color="rgb(80,80,255)"
+				 class="inline big"> 
+			</div>
+			<div data-type="klimatrend"
+				 data-device="wz_Sensor"
+	          data-get="statTemperatureTendency"
+				 data-refperiod="2"
+				 class="inline big" >
+			</div>
+			<div class="narrow">AUSSEN</div>	
+		</div>
+	</div>	
+		
+	<div class="right top-narrow-2x">
+		<div data-type="label" 
+			 data-device="HeizungsStatus"
+			 data-colors='["cornflowerblue","green","firebrick"]' 
+			 date-get="state"				 
+			 data-limits='[-73,0,30]'  		 
+			 data-unit="%B0C%0A" 
+			 class="centered big top-narrow">
+		</div>
+		<br>	
+		<div class="right top-narrow-2x">
+			<div data-type="klimatrend"
+				 data-device="Heizung_Wohnzimmer"
+				 data-get="delta"
+				 data-refperiod="1"
+				 class="inline big" >
+			</div>
+			<div data-type="klimatrend"
+				 data-device="Heizung_Wohnzimmer"
+				 data-get="actuationCalc"
+				 data-refperiod="1"
+				 class="inline big" >
+			</div>
+			<div class="narrow">INNEN</div>
+		</div>
 	</div>
 </li>
-
-<li class="halbTransparent border-right" data-row="1" data-col="8" data-sizex="2" data-sizey="1">
-	<header class="headerTransparent">UHRZEIT / DATUM</header>
-	<div data-type="clock"
-		 data-format="H:i:s"
-		 data-interval="1000"
-		 class="orange bigger thin">
-	</div>
-	<div data-type="clock"
-		 data-format="D. d.m.Y"
-		 data-shortday-length="2"
-		 class="grey big">
+<li class="halbTransparent border-right" data-row="1" data-col="9" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">HAUPTSCHALTER</header>
+	<div class="top-space">
+		<div data-type="switch"
+			 data-device="vsx_510"
+			 data-get="power"
+			 data-on-color="black"
+			 data-off-color="#808080"
+			 data-on-background-color="cornflowerblue"
+			 data-off-background-color="#3D4C66"
+			 data-icon="fa-bolt"
+			 class="big">
+		</div>
+		<div class="">An/Aus</div>
 	</div>
 </li>
+<li class="halbTransparent border-right" data-row="2" data-col="9" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">EXTRAS</header>
+		<div data-type="pagetab" 
+			data-url="heizung.html" 
+			data-background-icon="fa-circle-thin"
+			data-on-background-color="#aa6900"
+			data-on-color="#C4C4C4"
+			data-off-color="#C4C4C4" 
+			data-icon="fa-fire" 
+			class="bigger">
+		</div>
+		<div data-type="label" class="cell top-narrow">Heizung</div>
+	 
+	   <div data-type="pagetab"
+			 data-url="rolladen.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icon="ftui-window"
+			 class="bigger">
+		</div>
+	   <div data-type="label" class="cell top-narrow">Rolladen</div>
+		
+		<div data-type="pagetab"
+			 data-url="regenradar.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icon="oa-weather_rain"
+			 class="bigger">
+		</div>
+		<div data-type="label" class="cell top-narrow">Regenradar</div>	   	   
+		
+		<div data-type="pagetab"
+			 data-url="abfahrt.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icon="ma-directions_bus"
+			 class="bigger">
+		</div>
+	
+		<div data-type="pagetab"
+			 data-url="rpi_status.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icon="fa-server"
+			 class="bigger">
+		</div>
+		
+		<div data-type="popup"
+		 data-device="alarm_scharf"
+		 data-get-on="on"
+		 data-width="350px"
+		 data-height="525px">		 
 
+		<div data-type="symbol"
+			 data-device="dummy_alarm"
+			 data-states='["on","off"]'
+			 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
+			 data-colors='["#C4C4C4","#C4C4C4"]'
+			 data-background-icons='["fa-circle","none"]'
+			 data-background-colors='["cornflowerblue","none"]'
+			 class="bigger">
+		</div>
+		<div class="dialog dialogTransparent">
+			<header class="dialogheaderTransparent">ALARM-STATUS</header>
+			<div class="top-space">
+				<div class="">Alarm scharf schalten:</div>
+				<div onclick="$('.dialog-close').trigger('click');"
+					 data-type="switch"
+					 data-device="dummy_alarm"
+					 data-states='["on","off"]'
+					 data-set-states='["on","on"]'
+					 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
+					 data-colors='["firebrick","#808080"]'
+					 data-background-icons='["fa-circle","fa-circle"]'
+					 data-background-colors='["cornflowerblue","#3D4C66"]'
+					 class="bigger">
+				</div>
+			</div>
+			<div class="top-space">
+				<div class="">Alarm unscharf schalten (PIN-Code)
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="1"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">1
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="2"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">2
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="3"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">3
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="4"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">4
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="5"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">5
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="6"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">6
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="7"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">7
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="8"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">8
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="9"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">9
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="0"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">0
+					</div>
+					<div onclick="$('.dialog-close').trigger('click');"
+						 data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="#"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">OK
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</li>
 <li class="halbTransparent border-left border-right" data-row="2" data-col="1" data-sizex="1" data-sizey="4">
 	<header class="headerTransparent">RÄUME</header>
 	<div class="centered">
-		<div data-type="pagetab"
-			 data-device="bad_alert"
-			 data-icon="fa-tint"
-			 data-states='["off","on"]'
-			 data-url="bad.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-tint","fa-tint warn"]'
-			 class="bigger">
-		</div>
-		<div data-type="pagetab"
-			 data-device="bu_alert"
-			 data-icon="ro-pc"
-			 data-states='["off","on"]'
-			 data-url="buro.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["ro-pc","ro-pc warn"]'
-			 class="bigger">
-		</div>
-		<div data-type="pagetab"
-			 data-device="fl_alert"
-			 data-icon="ro-hanger"
-			 data-states='["off","on"]'
-			 data-url="flur.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["ro-hanger","ro-hanger warn"]'
-			 class="bigger">
-		</div>
-		<div data-type="pagetab"
-			 data-device="ku_alert"
-			 data-icon="fa-cutlery"
-			 data-states='["off","on"]'
-			 data-url="kuche.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-cutlery" ,"fa-cutlery warn"]'
-			 class="bigger">
-		</div>
-		<div data-type="pagetab"
-			 data-device="sz_alert"
-			 data-icon="fa-bed"
-			 data-states='["off","on"]'
-			 data-url="schlafzimmer.html"
-			 data-background-icon="fa-circle-thin"
-			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-bed","fa-bed warn"]'
-			 class="bigger">
-		</div>
 		<div data-type="pagetab"
 			 data-device="wz_alert"
 			 data-icon="ro-sofa"
@@ -258,25 +371,99 @@
 			 data-url="wohnzimmer.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
 			 data-icons='["ro-sofa","ro-sofa warn"]'
-			 class="bigger">
+			 class="bigplus">
 		</div>
+		<div class="narrow">WOHNZIMMER</div>
+			
 		<div data-type="pagetab"
-			 data-device="dr_ga_alert"
-			 data-icon="fa-tree"
+		 data-device="ku_alert"
+		 data-icon="fa-cutlery"
+		 data-states='["off","on"]'
+		 data-url="kuche.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icons='["fa-cutlery" ,"fa-cutlery warn"]'
+		 class="bigplus">
+		</div>
+		<div class="narrow">KÜCHE</div>
+		
+		<div data-type="pagetab"
+		 data-device="bad_alert"
+		 data-icon="fa-tint"
+		 data-states='["off","on"]'
+		 data-url="bad.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icons='["fa-tint","fa-tint warn"]'
+		 class="bigplus">
+		</div>
+		<div class="narrow">BAD</div>
+			
+		<div data-type="pagetab"
+		 data-device="fl_alert"
+		 data-icon="ro-hanger"
+		 data-states='["off","on"]'
+		 data-url="flur.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icons='["ro-hanger","ro-hanger warn"]'
+		 class="bigplus">
+		</div>
+		<div class="narrow">FLUR</div>
+		<div data-type="pagetab"
+			 data-device="sz_alert"
+			 data-icon="fa-bed"
 			 data-states='["off","on"]'
-			 data-url="draussen_garage.html"
+			 data-url="schlafzimmer.html"
 			 data-background-icon="fa-circle-thin"
 			 data-on-background-color="#aa6900"
-			 data-on-color="#808080"
-			 data-off-color="#808080"
-			 data-icons='["fa-tree","fa-tree warn"]'
-			 class="bigger">
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icons='["fa-bed","fa-bed warn"]'
+			 class="bigplus">
 		</div>
+		<div class="narrow">SCHL.ZIMMER</div>
+		
+		<div data-type="pagetab"
+		 data-device="bu_alert"
+		 data-icon="ro-pc"
+		 data-states='["off","on"]'
+		 data-url="buro.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icons='["ro-pc","ro-pc warn"]'
+		 class="bigplus">
+		</div>
+		<div class="narrow">BÜRO</div>
 	</div>
 </li>
+
+<!-- ################################################################# HEADER END######################################################################### -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <li class="halbTransparent border-right" data-row="2" data-col="2" data-sizex="3" data-sizey="2">
 	<header class="headerTransparent">WETTERVORHERSAGE FÜR NEU-ULM</header>
@@ -370,7 +557,7 @@
 			</div>
 			<div class="top-space">
 				<div data-type="klimatrend"
-					 data-device="Wetter_Pro"
+					 data-device="NeuUlm_Wetter"
 					 data-get="statTemperatureTendency"
 					 data-refperiod="1"
 					 class="inline large" >
@@ -443,8 +630,8 @@
 <li class="halbTransparent" data-row="2" data-col="5" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">WINDRICHTUNG</header>
 	<div data-type="wind_direction" 
-		 data-device="Wetter_Pro"
-		 data-direction="windDir"
+		 data-device="NeuUlm_Wetter"
+		 data-direction="wind_direction"
 		 data-speed="wind"
 		 data-calm="-"
 		 data-size="110"
@@ -698,234 +885,6 @@
 	</div>
 </li>
 
-<li class="halbTransparent border-left border-right" data-row="2" data-col="9" data-sizex="1" data-sizey="4">
-	<header class="headerTransparent">EXTRAS</header>
-<div data-type="pagetab"
-		 data-url="abfahrt.html"
-		 data-background-icon="fa-circle-thin"
-		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
-		 data-icon="ma-directions_bus"
-		 class="bigger">
-	</div>
-	<div data-type="pagetab"
-		 data-url="regenradar.html"
-		 data-background-icon="fa-circle-thin"
-		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
-		 data-icon="oa-weather_rain"
-		 class="bigger">
-	</div>
-	<div data-type="popup"
-		 data-device="alarm_scharf"
-		 data-get-on="on"
-		 data-width="350px"
-		 data-height="525px">
-		<div data-type="symbol"
-			 data-device="dummy_alarm"
-			 data-states='["on","off"]'
-			 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
-			 data-colors='["firebrick","#808080"]'
-			 data-background-icons='["fa-circle","none"]'
-			 data-background-colors='["cornflowerblue","none"]'
-			 class="bigger">
-		</div>
-		<div class="dialog dialogTransparent">
-			<header class="dialogheaderTransparent">ALARM-STATUS</header>
-			<div class="top-space">
-				<div class="">Alarm scharf schalten:
-				</div>
-				<div onclick="$('.dialog-close').trigger('click');"
-					 data-type="switch"
-					 data-device="dummy_alarm"
-					 data-states='["on","off"]'
-					 data-set-states='["on","on"]'
-					 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
-					 data-colors='["firebrick","#808080"]'
-					 data-background-icons='["fa-circle","fa-circle"]'
-					 data-background-colors='["cornflowerblue","#3D4C66"]'
-					 class="bigger">
-				</div>
-			</div>
-			<div class="top-space">
-				<div class="">Alarm unscharf schalten (PIN-Code)
-				</div>
-				<div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="1"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">1
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="2"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">2
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="3"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">3
-					</div>
-				</div>
-				<div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="4"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">4
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="5"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">5
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="6"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">6
-					</div>
-				</div>
-				<div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="7"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">7
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="8"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">8
-					</div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="9"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">9
-					</div>
-				</div>
-				<div>
-					<div data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="0"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">0
-					</div>
-					<div onclick="$('.dialog-close').trigger('click');"
-						 data-type="push"
-						 data-icon=""
-						 data-device="dummy_keypad"
-						 data-set-on="#"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger grey">OK
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div data-type="popup"
-		 data-width="400px"
-		 data-height="175px">
-		<div data-type="symbol"
-			 data-device="KeyMatic"
-			 data-get="door"
-			 data-states='["closed","open"]'
-			 data-icons='["ftui-door","ftui-door fa-lg"]'
-			 data-background-icons='["none","none"]'
-			 data-background-colors='["none","none"]'
-			 data-colors='["#808080","firebrick"]'
-			 class="inline bigger">
-		</div>
-		<div class="dialog dialogTransparent">
-			<header class="dialogheaderTransparent">TÜR</header>
-			<div class="top-space">
-				<div class="inline">
-					<div data-type="push"
-						 data-device="fl_tueroeffner"
-						 data-set=""
-						 data-set-on="on-for-timer 4"
-						 data-icon="fa-key"
-						 data-off-color="#808080"
-						 data-off-background-color="#3D4C66"
-						 class="bigger right-space-3">
-					</div>
-					<div class="right-space-3">Summer<br />Haustür
-					</div>
-				</div>
-				<div class="inline">
-					<div data-type="switch"
-						 data-device="KeyMatic"
-						 data-get="state"
-						 data-set=""
-						 data-states='["locked","unlocked"]'
-						 data-set-states='["unlock","lock"]'
-						 data-icons='["fa-lock","fa-unlock"]'
-						 data-background-icons='["fa-circle","fa-circle"]'
-						 data-colors='["green","firebrick"]'
-						 data-background-colors='["#3D4C66","cornflowerblue"]'
-						 class="bigger">
-					</div>
-					<div class="">Schloss<br />Wohnungstür
-					</div>
-				</div>
-				<div class="inline">
-					<div data-type="switch"
-						 data-device="KeyMatic"
-						 data-get="door"
-						 data-set="door"
-						 data-states='["closed","open"]'
-						 data-set-states='["open",""]'
-						 data-icons='["ftui-door","ftui-door fa-lg"]'
-						 data-background-icons='["fa-circle-thin","none"]'
-						 data-colors='["green","firebrick"]'
-						 data-background-colors='["#3D4C66","none"]'
-						 class="bigger">
-					</div>
-					<div class="">Wohnungstür<br />&nbsp;
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div data-type="pagetab"
-		 data-url="rpi_status.html"
-		 data-background-icon="fa-circle-thin"
-		 data-on-background-color="#aa6900"
-		 data-on-color="#808080"
-		 data-off-color="#808080"
-		 data-icon="fa-server"
-		 class="bigger">
-	</div>
-</li>
 
 <li class="halbTransparent border-right" data-row="4" data-col="2" data-sizex="5" data-sizey="2">
     <header class="headerTransparent">7-TAGE VORHERSAGE</header>
@@ -937,147 +896,71 @@
 			<li class="Transparent">
 				<div class="inline">
 					<div data-type="label"
-						 data-device="Wetter_Pro"
-						 data-get="fc0_tempMax"
+						 data-device="NeuUlm_Wetter"
+						 data-get="fc1_high_c"
 						 data-unit="°C&nbsp;"
 						 class="gigantic">
 					</div>
 					<div class="inline medium">min:&nbsp;
 					</div>
 					<div data-type="label"
-						 data-device="Wetter_Pro"
-						 data-get="fc0_tempMin"
+						 data-device="NeuUlm_Wetter"
+						 data-get="fc1_low_c"
 						 data-unit="%B0C%0A"
 						 class="inline large">
 					</div>
 				</div>
 				<div class="inline">
 					<div data-type="label"
-						 data-device="Wetter_Pro"
-						 data-get="fc0_weatherDay"
+						 data-device="NeuUlm_Wetter"
+						 data-get="fc1_condition"
 						 class="large cell">
 					</div>
 					<div data-type="weather"
-						 data-device="Wetter_Pro"
-						 data-get="fc0_weatherDay"
+						 data-device="NeuUlm_Wetter"
+						 data-get="fc1_condition"
 						 data-imageset="kleinklima"
 						 class="top-space right-space" 
 						 style="width:163px;">
 					</div>
 				</div>
-				<div class="inline left-space">
-					<div class="">
-						<div class="medium inline">Regen:
-						</div>
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc0_chOfRainDay"
-							 data-unit="%"
-							 data-limits='[0,40,80]'
-							 data-colors='["green","#aa6900","firebrick"]'
-							 class="big inline">
-						</div>
-					</div>
-					<div class="">
-						<div class="medium top-space-2 inline">Sonne:
-						</div>
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc0_sun"
-							 data-limits='[0,40,80]'
-							 data-colors='["firebrick","#aa6900","green"]'
-							 data-unit="%"
-							 class="big top-space-2 inline">
-						</div>
-					</div>
-					<div class="">
-						<div data-type="label"
-							 class="medium top-space-2 inline">UV:
-						</div>
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc0_uv"
-							 data-unit=""
-							 data-limits="[0,4,8,11]"
-							 data-colors='["green","#aa6900","firebrick","red"]'
-							 class="big top-space-2 inline">
-						</div>
-					</div>
-				</div>
 				<div class="top-space">
-                   <div class="large cell darker">Heute
+               <div class="large cell darker">Heute
 					</div>
 				</div>
 			</li>
 			<li class="Transparent">
 				<div class="inline">
 					<div data-type="label"
-						 data-device="Wetter_Pro"
-						 data-get="fc1_tempMax"
+						 data-device="NeuUlm_Wetter"
+						 data-get="fc2_high_c"
 						 data-unit="°C&nbsp;"
 						 class="gigantic">
 					</div>
 					<div class="inline medium">min:&nbsp;
 					</div>
 					<div data-type="label"
-						 data-device="Wetter_Pro"
-						 data-get="fc1_tempMin"
+						 data-device="NeuUlm_Wetter"
+						 data-get="fc2_low_c"
 						 data-unit="%B0C%0A"
 						 class="inline large">
 					</div>
 				</div>
 				<div class="inline">
 					<div data-type="label"
-						 data-device="Wetter_Pro"
-						 data-get="fc1_weatherDay"
+						 data-device="NeuUlm_Wetter"
+						 data-get="fc2_condition"
 						 class="large cell">
 					</div>
 					<div data-type="weather"
-						 data-device="Wetter_Pro"
-						 data-get="fc1_weatherDay"
+						 data-device="NeuUlm_Wetter"
+						 data-get="fc2_condition"
 						 data-imageset="kleinklima"
 						 class="top-space right-space"
 						 style="width:163px;">
 					</div>
 				</div>
-				<div class="inline left-space">
-					<div class="">
-						<div class="medium inline">Regen:
-						</div>
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_chOfRainDay"
-							 data-unit="%"
-							 data-limits='[0,40,80]'
-							 data-colors='["green","#aa6900","firebrick"]'
-							 class="big inline">
-						</div>
-					</div>
-					<div class="">
-						<div class="medium top-space-2 inline">Sonne:
-						</div>
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_sun"
-							 data-limits='[0,40,80]'
-							 data-colors='["firebrick","#aa6900","green"]'
-							 data-unit="%"
-							 class="big top-space-2 inline">
-						</div>
-					</div>
-					<div class="">
-						<div class="medium top-space-2 inline">UV:
-						</div>
-						<div data-type="label"
-							 data-device="Wetter_Pro"
-							 data-get="fc1_uv"
-							 data-unit=""
-							 data-limits="[0,4,8,11]"
-							 data-colors='["green","#aa6900","firebrick","red"]'
-							 class="big top-space-2 inline">
-						</div>
-					</div>
-				</div>
+				
 				<div class="top-space">
 					<div data-type="label"
 						 data-device="Wetter_Pro"
