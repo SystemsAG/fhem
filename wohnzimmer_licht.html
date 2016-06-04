@@ -274,8 +274,8 @@
 			</div>
 			<div class="inline top-space">
 				<div data-type="switch"
-					 data-device="wz_ilight_decke"
-					 data-get-on="on.*"
+					 data-device="wz_Dimmer_status"
+					 data-get="state"
 					 data-set-on="on"
 					 data-on-color="black"
 					 data-off-color="#808080"
@@ -289,7 +289,7 @@
 			</div>
 			<div class="inline top-space">
 				<div data-type="push"
-					 data-device="wz_ilight_decke"
+					 data-device="wz_Dimmer"
 					 data-set="rgb"
 					 data-set-on="FFFFFF"
 					 data-off-color="#808080"
@@ -314,12 +314,12 @@
 					<div class="">Farbe
 					</div>
 					<div class="dialog dialogTransparent">
-						<header class="dialogheaderTransparent">DECKENLAMPE - FARBE</header>
+						<header class="headerTransparent">DECKENLAMPE </header>
 						<div class="top-space">
 							<div class="inline">
 								<div onclick="$('.dialog-close').trigger('click');"
 									 data-type="push"
-									 data-device="wz_ilight_decke"
+									 data-device="wz_Dimmer"
 									 data-set="hue"
 									 data-set-on="0"
 									 data-off-color="#FF0000"
@@ -333,7 +333,7 @@
 							<div class="inline">
 								<div onclick="$('.dialog-close').trigger('click');"
 									 data-type="push"
-									 data-device="wz_ilight_decke"
+									 data-device="wz_Dimmer"
 									 data-set="hue"
 									 data-set-on="60"
 									 data-off-color="#FFFF00"
@@ -347,7 +347,7 @@
 							<div class="inline">
 								<div onclick="$('.dialog-close').trigger('click');"
 									 data-type="push"
-									 data-device="wz_ilight_decke"
+									 data-device="wz_Dimmer"
 									 data-set="hue"
 									 data-set-on="125"
 									 data-off-color="#00FF00"
@@ -361,7 +361,7 @@
 							<div class="inline">
 								<div onclick="$('.dialog-close').trigger('click');"
 									 data-type="push"
-									 data-device="wz_ilight_decke"
+									 data-device="wz_Dimmer"
 									 data-set="hue"
 									 data-set-on="190"
 									 data-off-color="#00FFFF"
@@ -375,7 +375,7 @@
 							<div class="inline">
 								<div onclick="$('.dialog-close').trigger('click');"
 									 data-type="push"
-									 data-device="wz_ilight_decke"
+									 data-device="wz_Dimmer"
 									 data-set="hue"
 									 data-set-on="260"
 									 data-off-color="#0000FF"
@@ -389,7 +389,7 @@
 							<div class="inline">
 								<div onclick="$('.dialog-close').trigger('click');"
 									 data-type="push"
-									 data-device="wz_ilight_decke"
+									 data-device="wz_Dimmer"
 									 data-set="hue"
 									 data-set-on="325"
 									 data-off-color="#FF00FF"
@@ -403,7 +403,7 @@
 							<div class="inline">
 								<div onclick="$('.dialog-close').trigger('click');"
 									 data-type="push"
-									 data-device="wz_ilight_decke"
+									 data-device="wz_Dimmer"
 									 data-set="rgb"
 									 data-set-on="FFFFFF"
 									 data-off-color="#FFFFFF"
@@ -420,9 +420,11 @@
 			</div>
 			<div class="top-space-2">
 				<div data-type="volume"
-					 data-device="wz_ilight_decke"
-					 data-get="brightness"
-					 data-set="brightness"
+					 data-device="wz_Dimmer"
+					 data-get="dim"
+					 data-refperiod="2"
+					 date-get-value="-1"
+					 data-set="dim"
 					 data-min="0"
 					 data-max="100"
 					 data-tickstep="10"
