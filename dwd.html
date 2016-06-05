@@ -244,14 +244,50 @@
 	</div>
 </li>
 
+<!--  
 <li class="halbTransparent" data-row="2" data-col="2" data-sizex="7" data-sizey="4" style="overflow:auto;">
- 	<header class="headerTransparent">WETTERWARNUNGEN REGION HANNOVER</header>
+ 	<header class="headerTransparent">WETTERWARNUNGEN REGION NEU-ULM</header>
 	<div data-type="gds"
-		 data-device="gds"
-		 data-get="alert"
+		 data-device="dwd_warnmeldung"
+		 data-get="alerts"
 		 data-max="20"
 		 class="centered large">
 	</div>
+</li>
+-->
+<li data-row="2" data-col="2" data-sizex="4" data-sizey="4">
+ 	<header>DWD Wetterkarte</header>
+ 	<div data-type="image"
+			 data-url="http://www.dwd.de/EN/weather/weather_climate_local/_functions/bildgalerie/wetter_aktuell.jpg?view=nasImage&nn=580122" 
+			 data-size="100%"
+			 data-height="530px"
+			 data-width="430px"
+			 data-opacity="1"
+			 data-refresh="120">
+		</div>
+	 
+</li>
+<li data-row="2" data-col="6" data-sizex="3" data-sizey="2">
+ 	<header>DWD Baden-Würtemberg</header>
+	 	<div data-type="image"
+			 data-url="http://www.dwd.de/DE/wetter/wetterundklima_vorort/baden-wuerttemberg/_functions/bildgalerie/wetter_aktuell.jpg?view=nasImage&nn=23700836" 
+			 data-size="100%"
+			 data-height="250px"
+			 data-width="320px"
+			 data-opacity="1"
+			 data-refresh="120">
+		</div>
+<li data-row="4" data-col="6" data-sizex="3" data-sizey="2">
+ 	<header>DWD Bayern</header>
+	 	<div data-type="image"
+			 data-url="http://www.dwd.de/DE/wetter/wetterundklima_vorort/bayern/_functions/bildgalerie/wetter_aktuell.jpg?view=nasImage&nn=560252" 
+			 data-size="100%"
+			 data-height="250px"
+			 data-width="320px"
+			 data-opacity="1"
+			 data-refresh="120">
+		</div>
+</li>
 </li>
 
 <li class="halbTransparent border-left border-right" data-row="2" data-col="9" data-sizex="1" data-sizey="4">
