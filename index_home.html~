@@ -32,8 +32,11 @@
 	<div class="top-space">
 		<div class="inline">
 			<div data-type="checkbox"
-				 data-device="heatingcontrol_dummy"
+				 data-device="wz_Nebenlicht"
+				 
+				 data-set-on="on"
 				 data-on-color="green"
+				 data-set-off="inactive"
 				 data-off-color="red"
 				 data-on-background-color= "#EEEDF0"
 				 data-off-background-color="#3D4C66"
