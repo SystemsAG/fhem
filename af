@@ -1,0 +1,174 @@
+[33mcommit 063b5b2720cf1f9511f422d580c92608603b720f[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Mon Jun 6 01:25:12 2016 +0200
+
+    DWD hinzugefügt
+
+[33mcommit 1f7e13e65a2d0a7b5058c89c4cdb40e4f647cb33[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sat Jun 4 15:55:11 2016 +0200
+
+    Dimmer aufgenommen
+
+[33mcommit 4cf2b8deb22d614500e1e0b424d011250ab78909[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Wed Jun 1 19:34:38 2016 +0200
+
+    merging
+
+[33mcommit 08404aea0fa6232e6147ca581235ed2238349acb[m
+Merge: aa6b9a2 598fcf8
+Author: mc-whity <alexey1@gmx.de>
+Date:   Wed Jun 1 19:24:53 2016 +0200
+
+    Merge index_home.html
+
+[33mcommit aa6b9a27e70129e162ca8567c73218cd9c5b1fbe[m
+Author: mc-whity <mc-whity@github.com>
+Date:   Wed Jun 1 00:23:07 2016 +0200
+
+    Regenradar erstellt noch nicht ganz fertig
+
+[33mcommit 8b2a17a85663771a6af66ea6b96c20bb609641f1[m
+Author: mc-whity <mc-whity@github.com>
+Date:   Wed Jun 1 00:21:16 2016 +0200
+
+    Wetter.html regenradar.html index_home.html wurden bearbeitet. Header im index ist fast fertig
+
+[33mcommit 48df9a32b4fe4f4441860131cb987fa333edb352[m
+Merge: aa3ee10 70ac94b
+Author: mc-whity <mc-whity@github.com>
+Date:   Tue May 31 00:48:34 2016 +0200
+
+    Mergeprobleme
+
+[33mcommit 598fcf8d209ebf7f8b4d31174485aaf425026827[m
+Merge: aa3ee10 70ac94b
+Author: mc-whity <mc-whity@github.com>
+Date:   Tue May 31 00:10:15 2016 +0200
+
+    Index_home.html wurde gemerged
+
+[33mcommit aa3ee10f69e6b263aa3d10c24cced96a2f5442cf[m
+Author: mc-whity <mc-whity@github.com>
+Date:   Mon May 30 23:31:50 2016 +0200
+
+    Die gesamte Header wurde in der Index_home.html geändert TELEFON TANKEN RADIO MÜLL wurden hinzugefügt
+
+[33mcommit 70ac94b703fff794c3746c75e3ae215afec491b3[m
+Author: mc-whity <mc-whity@github.com>
+Date:   Mon May 30 01:44:45 2016 +0200
+
+    Index_home abgeändert
+
+[33mcommit ac33f160246d3c094045d824fa0d14d92cd83c67[m
+Author: mc-whity <mc-whity@github.com>
+Date:   Mon May 30 00:58:23 2016 +0200
+
+    Index_home.html Wetter&Innentemperatur fertig gestellt
+
+[33mcommit 6e0a16347224e97440f28d4d23d4b267677688f2[m
+Author: mc-whity <mc-whity@github.com>
+Date:   Sun May 29 21:51:11 2016 +0200
+
+    Index_home.html verändert
+
+[33mcommit cdcef1712fa024ccbb8c98a68dc9dceb822f0e3c[m
+Merge: 524140a 5363bfa
+Author: mc-whity <mc-whity@github.com>
+Date:   Sun May 29 20:20:51 2016 +0200
+
+    Merge https://github.com/mc-whity/fhem into fhem
+    
+    Ist ein Test mit der Abfahrt.html
+
+[33mcommit 5363bfa0ad359efb26b9e5c09b118b6708b26dea[m
+Merge: 0c7f792 fa6af26
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 20:15:36 2016 +0200
+
+    Merge pull request #2 from mc-whity/fhem
+    
+    Fhem
+
+[33mcommit 524140acf6c3a7557c8f15a0476945f50fd01325[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 20:02:14 2016 +0200
+
+    Test
+
+[33mcommit fa6af26e2a3633795e5caaf88ce8a0032660ba77[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 19:25:25 2016 +0200
+
+    Create README.md
+
+[33mcommit 8447d2dfbac2e5d522ae69017d0cd8e5f33cac0e[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 19:15:05 2016 +0200
+
+    abfahrt.html Titel korrigiert
+
+[33mcommit 0c7f792d42793302e20f354fc14ecdd1edb5011e[m
+Merge: 68be1a9 9091664
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 19:03:40 2016 +0200
+
+    Merge pull request #1 from mc-whity/fhem
+    
+    Fhem
+
+[33mcommit 9091664a4d2ca5b8bc9fcfa1cdbf59f28240e49a[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 18:50:14 2016 +0200
+
+    Test
+
+[33mcommit 330c0c5176595bfbe3afe2ec8c44e6c003e6788a[m
+Merge: c0c2201 13d1f01
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 18:21:53 2016 +0200
+
+    README.md wird nicht mehr benötigt
+
+[33mcommit c0c220111fa102152ed1af857f8b4cf28aee5133[m
+Merge: 4a1b552 68be1a9
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 17:57:33 2016 +0200
+
+    Merge https://github.com/mc-whity/fhem into fhem
+    
+    Das sind die für die momentane Visualisierung benötigten Dateien
+
+[33mcommit 4a1b552acf462cce53e6e0934043f20b131bf821[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sun May 29 17:56:19 2016 +0200
+
+    Fhem dateien wurden erstellt
+
+[33mcommit 68be1a9e33ba83e913f3689653274d5c096e9d36[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sat May 28 22:14:56 2016 +0200
+
+    Create README.md
+
+[33mcommit 13d1f01b965f564500226479993d85d2ef429717[m
+Merge: 33a095c 60be3cd
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sat May 28 20:06:10 2016 +0200
+
+    Merge pull request #1 from mc-whity/readme-edits
+    
+    Readme edits
+
+[33mcommit 60be3cd64d118fe4ae68d0a075d4a4eddf99b7b0[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sat May 28 19:27:46 2016 +0200
+
+    Update README.md
+
+[33mcommit 33a095c6968591b8c9af1af713c4d79ffbcc7e6c[m
+Author: mc-whity <alexey1@gmx.de>
+Date:   Sat May 28 19:07:19 2016 +0200
+
+    Initial commit

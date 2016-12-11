@@ -271,10 +271,11 @@
 	<div class="top-space">
 		<div class="inline">
 			<div data-type="slider"
-				 data-device="gpio18"
+				 data-device="sz_rRolladen"
 				 data-min="0"
-				 data-max="1024"
-				 data-on="1024"
+				 data-max="100"
+				 data-set-on="on"
+				 data-on="100"
 				 data-off="0"
 				 data-width="200"
 				 data-color="cornflowerblue"
@@ -284,9 +285,10 @@
 			<div class="top-space-4">Helligkeit
 			</div>
 		</div>
+ 		
 		<div class="inline">
 			<div data-type="switch"
-				 data-device="gpio18"
+				 data-device="sz_rRolladen"
 				 data-get-on="0"
 				 data-get-off="^((?!0).*)$"
 				 data-set-on="0"
@@ -346,7 +348,7 @@
 	<div class="top-space">
 		<div class="inline">
 			<div data-type="switch"
-				 data-device="fl_aktor_deckenlampe"
+				 data-device="fl_Licht"
 				 data-on-color="black"
 				 data-off-color="#808080"
 				 data-on-background-color="cornflowerblue"
@@ -432,7 +434,7 @@
 					 data-type="switch"
 					 data-device="dummy_alarm"
 					 data-states='["on","off"]'
-					 data-set-states='["on","on"]'
+					 data-set-states='["on","off"]'
 					 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
 					 data-colors='["firebrick","#808080"]'
 					 data-background-icons='["fa-circle","fa-circle"]'

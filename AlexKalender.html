@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>HOME</title>
+</head>
+<body>
+
+<div class="gridster">
+
+<ul>
+
+<!-- ################################################################# HEADER BEGIN ######################################################################### -->
+
+<li class="halbTransparent border-left border-right" data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">HOME</header>
+	<div data-type="pagetab"
+		 data-device="st_alert"
+		 data-get-on='["off","[1-9]{1}|[0-9]{2}"]'
+		 data-url="index_home.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icon="fa-home"
+		 data-icons='["fa-home","fa-home warn"]'
+		 class="bigger top-space">
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">HEIZUNG</header>
+	<div class="top-space">
+		<div class="inline">
+			<div data-type="checkbox"
+				 data-device="heatingcontrol_dummy"
+				 data-on-color="green"
+				 data-off-color="red"
+				 data-on-background-color= "#EEEDF0"
+				 data-off-background-color="#3D4C66"
+				 class="green medium cell top-space">
+			</div>
+			<div class="top-space">Wochenprogramm</div>
+		</div>
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="1" data-col="4" data-sizex="2" data-sizey="1">
+	<header class="headerTransparent">UHRZEIT / DATUM</header>
+	<div data-type="clock"
+		 data-format="H:i:s"
+		 data-interval="1000"
+		 class="orange_hell bigger thin">
+	</div>
+	<div data-type="clock"
+		 data-format="D. d.m.Y"
+		 data-shortday-length="2"
+		 class="big">
+	</div>
+</li>
+
+<li class="halbTransparent border-right" data-row="1" data-col="6" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">DWD</header>
+	<div data-type="pagetab"
+		 data-device="gds"
+		 data-get="a_count"
+		 data-get-on='["no","[1-9]{1}|[0-9]{2}"]'
+		 data-url="dwd.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icon="fa-bolt"
+		 data-icons='["fa-bolt","fa-bolt warn"]'
+		 class="bigger top-space">
+	</div>
+</li>
+
+<li class="halbTransparent border-right centered" data-row="1" data-col="7" data-sizex="2" data-sizey="1">
+	
+	<header class="headerTransparent">WETTER & INNENTEMPERATUR</header>
+				
+	<div class="top-narrow-10 centered">		
+		<div data-type="pagetab"
+		 data-url="wetter.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icon="fa-cloud"
+		 class="bigger">
+		</div>
+	
+		<div class="top-narrow">WETTER</div>
+	</div>
+
+	
+   <div class="left top-narrow-2x">
+		<div data-type="label" 
+			 data-device="NeuUlm_Wetter" 
+			 data-get="temperature" 
+			 data-part="1" data-limits='[-73,0,30]'
+			 data-colors='["#6699FF","#AA6900","#FF0000"]'
+			 data-unit="%B0C%0A" 
+			class="centered big top-narrow">
+		</div>
+		<br>
+		<div class="left top-narrow-2x">
+			<div data-type="klimatrend"
+				 data-device="wz_Sensor"
+	          data-get="statTemperatureTendency"
+				 data-refperiod="1"
+				 data-stagnating-color="rgb(80,80,80)"
+				 data-falling-color="rgb(80,80,180)"
+				 data-highmark="1"
+				 data-highmark-icon="fa-angle-double"
+				 data-highmark-rising-color="rgb(255,80,80)"
+				 data-highmark-falling-color="rgb(80,80,255)"
+				 class="inline big"> 
+			</div>
+			<div data-type="klimatrend"
+				 data-device="wz_Sensor"
+	          data-get="statTemperatureTendency"
+				 data-refperiod="2"
+				 class="inline big" >
+			</div>
+			<div class="narrow">AUSSEN</div>	
+		</div>
+	</div>	
+		
+	<div class="right top-narrow-2x">
+		<div data-type="label" 
+			 data-device="HeizungsStatus"
+			 data-colors='["cornflowerblue","green","firebrick"]' 
+			 date-get="state"				 
+			 data-limits='[-73,0,30]'  		 
+			 data-unit="%B0C%0A" 
+			 class="centered big top-narrow">
+		</div>
+		<br>	
+		<div class="right top-narrow-2x">
+			<div data-type="klimatrend"
+				 data-device="Heizung_Wohnzimmer"
+				 data-get="delta"
+				 data-refperiod="1"
+				 class="inline big" >
+			</div>
+			<div data-type="klimatrend"
+				 data-device="Heizung_Wohnzimmer"
+				 data-get="actuationCalc"
+				 data-refperiod="1"
+				 class="inline big" >
+			</div>
+			<div class="narrow">INNEN</div>
+		</div>
+	</div>
+</li>
+<li class="halbTransparent border-right" data-row="1" data-col="9" data-sizex="1" data-sizey="1">
+	<header class="headerTransparent">HAUPTSCHALTER</header>
+	<div class="top-space">
+		<div data-type="switch"
+			 data-device="vsx_510"
+			 data-get="power"
+			 data-on-color="black"
+			 data-off-color="#808080"
+			 data-on-background-color="cornflowerblue"
+			 data-off-background-color="#3D4C66"
+			 data-icon="fa-bolt"
+			 class="big">
+		</div>
+		<div class="">An/Aus</div>
+	</div>
+</li>
+<li class="halbTransparent border-right" data-row="2" data-col="9" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">EXTRAS</header>
+		<div data-type="pagetab" 
+			data-url="heizung.html" 
+			data-background-icon="fa-circle-thin"
+			data-on-background-color="#aa6900"
+			data-on-color="#C4C4C4"
+			data-off-color="#C4C4C4" 
+			data-icon="fa-fire" 
+			class="bigger">
+		</div>
+		<div data-type="label" class="cell top-narrow">Heizung</div>
+	 
+	   <div data-type="pagetab"
+			 data-url="rolladen.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icon="ftui-window"
+			 class="bigger">
+		</div>
+	   <div data-type="label" class="cell top-narrow">Rolladen</div>
+		
+		<div data-type="pagetab"
+			 data-url="regenradar.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icon="oa-weather_rain"
+			 class="bigger">
+		</div>
+		<div data-type="label" class="cell top-narrow">Regenradar</div>	   	   
+		
+		<div data-type="pagetab"
+			 data-url="abfahrt.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icon="ma-directions_bus"
+			 class="bigger">
+		</div>
+	
+		<div data-type="pagetab"
+			 data-url="rpi_status.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icon="fa-server"
+			 class="bigger">
+		</div>
+		
+		<div data-type="popup"
+		 data-device="alarm_scharf"
+		 data-get-on="on"
+		 data-width="350px"
+		 data-height="525px">		 
+
+		<div data-type="symbol"
+			 data-device="dummy_alarm"
+			 data-states='["on","off"]'
+			 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
+			 data-colors='["#C4C4C4","#C4C4C4"]'
+			 data-background-icons='["fa-circle","none"]'
+			 data-background-colors='["cornflowerblue","none"]'
+			 class="bigger">
+		</div>
+		<div class="dialog dialogTransparent">
+			<header class="dialogheaderTransparent">ALARM-STATUS</header>
+			<div class="top-space">
+				<div class="">Alarm scharf schalten:</div>
+				<div onclick="$('.dialog-close').trigger('click');"
+					 data-type="switch"
+					 data-device="dummy_alarm"
+					 data-states='["on","off"]'
+					 data-set-states='["on","on"]'
+					 data-icons='["fa-bell fa-lg","fa-bell-slash"]'
+					 data-colors='["firebrick","#808080"]'
+					 data-background-icons='["fa-circle","fa-circle"]'
+					 data-background-colors='["cornflowerblue","#3D4C66"]'
+					 class="bigger">
+				</div>
+			</div>
+			<div class="top-space">
+				<div class="">Alarm unscharf schalten (PIN-Code)
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="1"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">1
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="2"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">2
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="3"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">3
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="4"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">4
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="5"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">5
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="6"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">6
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="7"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">7
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="8"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">8
+					</div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="9"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">9
+					</div>
+				</div>
+				<div>
+					<div data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="0"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger">0
+					</div>
+					<div onclick="$('.dialog-close').trigger('click');"
+						 data-type="push"
+						 data-icon=""
+						 data-device="dummy_keypad"
+						 data-set-on="#"
+						 data-off-color="#808080"
+						 data-off-background-color="#3D4C66"
+						 class="bigger grey">OK
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</li>
+<li class="halbTransparent border-left border-right" data-row="2" data-col="1" data-sizex="1" data-sizey="4">
+	<header class="headerTransparent">RÄUME</header>
+	<div class="centered">
+		<div data-type="pagetab"
+			 data-device="wz_alert"
+			 data-icon="ro-sofa"
+			 data-states='["off","on"]'
+			 data-url="wohnzimmer.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icons='["ro-sofa","ro-sofa warn"]'
+			 class="bigplus">
+		</div>
+		<div class="narrow">WOHNZIMMER</div>
+			
+		<div data-type="pagetab"
+		 data-device="ku_alert"
+		 data-icon="fa-cutlery"
+		 data-states='["off","on"]'
+		 data-url="kuche.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icons='["fa-cutlery" ,"fa-cutlery warn"]'
+		 class="bigplus">
+		</div>
+		<div class="narrow">KÜCHE</div>
+		
+		<div data-type="pagetab"
+		 data-device="bad_alert"
+		 data-icon="fa-tint"
+		 data-states='["off","on"]'
+		 data-url="bad.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icons='["fa-tint","fa-tint warn"]'
+		 class="bigplus">
+		</div>
+		<div class="narrow">BAD</div>
+			
+		<div data-type="pagetab"
+		 data-device="fl_alert"
+		 data-icon="ro-hanger"
+		 data-states='["off","on"]'
+		 data-url="flur.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icons='["ro-hanger","ro-hanger warn"]'
+		 class="bigplus">
+		</div>
+		<div class="narrow">FLUR</div>
+		<div data-type="pagetab"
+			 data-device="sz_alert"
+			 data-icon="fa-bed"
+			 data-states='["off","on"]'
+			 data-url="schlafzimmer.html"
+			 data-background-icon="fa-circle-thin"
+			 data-on-background-color="#aa6900"
+			 data-on-color="#C4C4C4"
+			 data-off-color="#C4C4C4"
+			 data-icons='["fa-bed","fa-bed warn"]'
+			 class="bigplus">
+		</div>
+		<div class="narrow">SCHL.ZIMMER</div>
+		
+		<div data-type="pagetab"
+		 data-device="bu_alert"
+		 data-icon="ro-pc"
+		 data-states='["off","on"]'
+		 data-url="buro.html"
+		 data-background-icon="fa-circle-thin"
+		 data-on-background-color="#aa6900"
+		 data-on-color="#C4C4C4"
+		 data-off-color="#C4C4C4"
+		 data-icons='["ro-pc","ro-pc warn"]'
+		 class="bigplus">
+		</div>
+		<div class="narrow">BÜRO</div>
+	</div>
+</li>
+
+<!-- ################################################################# HEADER END######################################################################### -->
+
+
+<li class="halbTransparent border-left border-right" data-row="2" data-col="2" data-sizex="3" data-sizey="2">
+	<header class="headerTransparent">KALENDER ALEX</header>
+	
+        <table class="" width="100%" style="font-size:100%">
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_001_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_001_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_001_etime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_001_summary" style="min-width:20em;"></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_002_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_002_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_002_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_002_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_003_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_003_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_003_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_003_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_004_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_004_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_004_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_004_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_005_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_005_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_005_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_005_summary" ></div></td>
+        </tr>
+		        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_006_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_006_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_006_etime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_006_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_007_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_007_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_007_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_007_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_008_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_008_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_008_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_008_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_009_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_009_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_009_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_009_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alex_Kalendar" data-get="t_010_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_010_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alex_Kalendar" data-get="t_010_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alex_Kalendar" data-get="t_010_summary" ></div></td>
+        </tr>
+    </table>
+    
+   
+<!-- #########################KALENDER VON DER ALINA BEGINT AB HIER####################################################### -->    
+
+<li class="halbTransparent border-left border-right" data-row="2" data-col="6" data-sizex="3" data-sizey="2">
+	<header class="headerTransparent">KALENDER ALINA</header>
+	
+        <table class="" width="100%" style="font-size:100%">
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_001_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_001_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_001_etime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_001_summary" style="min-width:20em;"></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_002_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_002_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_002_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_002_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_003_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_003_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_003_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_003_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_004_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_004_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_004_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_004_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_005_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_005_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_005_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_005_summary" ></div></td>
+        </tr>
+		        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_006_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_006_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_006_etime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_006_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_007_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_007_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_007_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_007_summary" ></div></td>
+        </tr>
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_008_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_008_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_008_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_008_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_009_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_009_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_009_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_009_summary" ></div></td>
+        </tr>       
+        <tr>
+            <td>
+            	<div data-type="label" data-device="Alina_Kalendar" data-get="t_010_bdate" data-part="(\d\d\.\d\d\.).*"></div>
+            </td>
+            <td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_010_btime" data-part="(\d\d\:\d\d).*"></div>
+			</td>
+			<td>
+                <div data-type="label" data-device="Alina_Kalendar" data-get="t_010_etime" data-part="(\d\d\:\d\d).*"></div>
+            </td>
+            <td class="r"><div data-type="label" data-device="Alina_Kalendar" data-get="t_010_summary" ></div></td>
+        </tr>
+    </table>
+</li>
