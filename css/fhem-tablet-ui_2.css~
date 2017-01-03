@@ -189,7 +189,7 @@ a:active {
 
 .inline {
   display: inline-block;
-  margin:0px 5px 0px 0px !important;
+  margin:0px 0px 0px 0px !important;
 }
 .inline.narrow.link {
     margin: 0px -4px 0px -4px !important;
@@ -515,7 +515,7 @@ ul,li {
 }
 
 .gridster li header {
-    background: #777777;
+    background: #404043;
     color: #8c8c8c;
     display: block;
     font-size: 11px;

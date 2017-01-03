@@ -346,7 +346,7 @@
             <div data-type="spinner"
                  data-device="Heizung_Wohnzimmer"
 				 data-get="desired"
-				 data-set="desiredTemperature"
+				 data-set="desired"
                  data-icon-left-color="blue"
                  data-icon-right-color="red"
                  data-min="4.5"
@@ -711,23 +711,22 @@
 <li class="halbTransparent" data-row="3" data-col="8" data-sizex="1" data-sizey="1">
 </li>
 
-<li class="halbTransparent" data-row="4" data-col="2" data-sizex="1" data-sizey="1">
-	<header class="headerTransparent">VSX-510</header>
-	<div class="top-space">
-		<div data-type="switch"
-			 data-device="vsx_510"
-			 data-get="power"
-			 data-on-color="black"
-			 data-off-color="#808080"
-			 data-on-background-color="cornflowerblue"
-			 data-off-background-color="#3D4C66"
-			 data-icon="fa-power-off"
-			 class="bigger">
-		</div>
-		<div class="">An/Aus
-		</div>
-	</div>
-</li>
+<div>
+    <div class="doublebox-v inline">
+        <div data-type="push" data-device="SamsungTv"
+             data-icon="fa-chevron-up" data-background-icon="fa-square-o"
+             data-set-on="CHUP">
+        </div>
+        <div data-type="push" data-device="Rollo"
+                data-icon="fa-chevron-down" data-background-icon="fa-square-o"
+                data-set-on="CHDOWN">
+        </div>
+    </div>
+    <div class="inline">
+        <div class="bottom-space-2x">up</div>
+        <div class="top-space">down</div>KANAL
+    </div>
+</div>
 
 <li class="halbTransparent border-left border-right" data-row="4" data-col="3" data-sizex="1" data-sizey="1">
 	<header class="headerTransparent">SAMSUNG TV</header>
